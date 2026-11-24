@@ -1,4 +1,3 @@
-import pytest
 '''
 Check lengths given for a triangle, and classify the triangle type.
 
