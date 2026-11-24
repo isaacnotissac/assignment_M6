@@ -18,6 +18,14 @@ def test_sides_that_violate_triangle_inequality_are_invalid():
     assert is_valid_triangle(0, 3, 4) is False
 
 
+def test_classifies_impossible_sides_as_invalid():
+    message = "Invalid triangle: side lengths do not form a triangle"
+    assert classify_triangle(1, 1, 2) == message
+    assert classify_triangle(0, 1, 1) == message
+    assert classify_triangle(-1, 1, 1) == message
+    assert classify_triangle(2, 3, 6) == message
+
+
 def test_classifies_equilateral_triangle():
     assert classify_triangle(5, 5, 5) == "Equilateral"
 
